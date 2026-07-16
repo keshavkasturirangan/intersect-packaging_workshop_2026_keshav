@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "example_package_keshav"
-version = "0.1.0"
+dynamic = ["version"]
 dependencies = ["numpy"]
 readme = "README.md"
 
@@ -13,3 +13,6 @@ packages = ["src/example_package_keshav"]
 
 [project.optional-dependencies]
 test = ["pytest"]
+
+[tool.hatch]
+version.path = "src/example_package_keshav/__init__.py"
